@@ -1,0 +1,1707 @@
+{
+	"info": {
+		"_postman_id": "03196ef7-296b-4c6c-90aa-5f42dc216f2c",
+		"name": "ISP-Provider",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Backend",
+			"item": [
+				{
+					"name": "Users",
+					"item": [
+						{
+							"name": "Index",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/api/{{version}}/users?email&phone&user_type",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"{{version}}",
+										"users"
+									],
+									"query": [
+										{
+											"key": "user_name",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "email",
+											"value": null
+										},
+										{
+											"key": "phone",
+											"value": null
+										},
+										{
+											"key": "user_type",
+											"value": null
+										},
+										{
+											"key": "id",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "getCount",
+											"value": "1",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "user_name",
+											"value": "Super Admin",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "super.admin@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "phone",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "user_type",
+											"value": "internal",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "details",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "amd123123",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}/api/{{version}}/users",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"{{version}}",
+										"users"
+									],
+									"query": [
+										{
+											"key": "user_name",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "email",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "phone",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "user_type",
+											"value": null,
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/api/{{version}}/users/1",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"{{version}}",
+										"users",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "test",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "user_name",
+											"value": "Muhotasim Fuad 1",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "mdfuad979@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "phone",
+											"value": "01517949304",
+											"type": "text"
+										},
+										{
+											"key": "user_type",
+											"value": "internal",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "details",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "amd123123",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}/api/{{version}}/users/1",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"{{version}}",
+										"users",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "test",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/api/{{version}}/users/1",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"{{version}}",
+										"users",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "File",
+					"item": [
+						{
+							"name": "index",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/api/{{version}}/files?type=image&uri&perPage=2&getCount=1&page=3",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"{{version}}",
+										"files"
+									],
+									"query": [
+										{
+											"key": "type",
+											"value": "image"
+										},
+										{
+											"key": "uri",
+											"value": null
+										},
+										{
+											"key": "perPage",
+											"value": "2"
+										},
+										{
+											"key": "getCount",
+											"value": "1"
+										},
+										{
+											"key": "page",
+											"value": "3"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "file",
+											"type": "file",
+											"src": "/C:/Users/Muhotasim Fuad/Pictures/helpbox-contact.jpg"
+										},
+										{
+											"key": "type",
+											"value": "image",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}/api/{{version}}/files",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"{{version}}",
+										"files"
+									],
+									"query": [
+										{
+											"key": "",
+											"value": null,
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/api/{{version}}/files/19",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"{{version}}",
+										"files",
+										"19"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Menu",
+					"item": [
+						{
+							"name": "Index",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/api/{{version}}/menus?getCount=1&link",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"{{version}}",
+										"menus"
+									],
+									"query": [
+										{
+											"key": "getCount",
+											"value": "1"
+										},
+										{
+											"key": "link",
+											"value": null
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "name",
+											"value": "test",
+											"type": "default"
+										},
+										{
+											"key": "link",
+											"value": "test",
+											"type": "default"
+										},
+										{
+											"key": "type",
+											"value": "header",
+											"type": "default"
+										},
+										{
+											"key": "status",
+											"value": "1",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}/api/{{version}}/menus",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"{{version}}",
+										"menus"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetSingle",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/api/{{version}}/menus/1",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"{{version}}",
+										"menus",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "name",
+											"value": "test2",
+											"type": "text"
+										},
+										{
+											"key": "link",
+											"value": "test",
+											"type": "text"
+										},
+										{
+											"key": "type",
+											"value": "header",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}/api/{{version}}/menus/1",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"{{version}}",
+										"menus",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/api/{{version}}/menus/3",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"{{version}}",
+										"menus",
+										"3"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Pages",
+					"item": [
+						{
+							"name": "Index",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/api/{{version}}/page?getCount=1&perPage=20&page=1",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"{{version}}",
+										"page"
+									],
+									"query": [
+										{
+											"key": "getCount",
+											"value": "1"
+										},
+										{
+											"key": "perPage",
+											"value": "20"
+										},
+										{
+											"key": "page",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "title",
+											"value": "test 4",
+											"type": "text"
+										},
+										{
+											"key": "type",
+											"value": "system",
+											"type": "text"
+										},
+										{
+											"key": "content_body",
+											"value": "test",
+											"type": "text"
+										},
+										{
+											"key": "meta_title",
+											"value": "test",
+											"type": "text"
+										},
+										{
+											"key": "meta_key",
+											"value": "test",
+											"type": "text"
+										},
+										{
+											"key": "meta_description",
+											"value": "test",
+											"type": "text"
+										},
+										{
+											"key": "no_follow",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "no_index",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}/api/{{version}}/page",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"{{version}}",
+										"page"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetSingle",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/api/{{version}}/page/111",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"{{version}}",
+										"page",
+										"111"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "title",
+											"value": "test 43",
+											"type": "text"
+										},
+										{
+											"key": "type",
+											"value": "system",
+											"type": "text"
+										},
+										{
+											"key": "content_body",
+											"value": "test",
+											"type": "text"
+										},
+										{
+											"key": "meta_title",
+											"value": "test",
+											"type": "text"
+										},
+										{
+											"key": "meta_key",
+											"value": "test",
+											"type": "text"
+										},
+										{
+											"key": "meta_description",
+											"value": "test",
+											"type": "text"
+										},
+										{
+											"key": "no_follow",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "no_index",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}/api/{{version}}/page/1",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"{{version}}",
+										"page",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/api/{{version}}/page/2",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"{{version}}",
+										"page",
+										"2"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Category",
+					"item": [
+						{
+							"name": "Index",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/api/{{version}}/categories?getCount=1&perPage=20&page=1&title",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"{{version}}",
+										"categories"
+									],
+									"query": [
+										{
+											"key": "getCount",
+											"value": "1"
+										},
+										{
+											"key": "perPage",
+											"value": "20"
+										},
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "title",
+											"value": null
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "title",
+											"value": "test 4",
+											"type": "text"
+										},
+										{
+											"key": "content_body",
+											"value": "test",
+											"type": "text"
+										},
+										{
+											"key": "meta_title",
+											"value": "test",
+											"type": "text"
+										},
+										{
+											"key": "meta_key",
+											"value": "test",
+											"type": "text"
+										},
+										{
+											"key": "meta_description",
+											"value": "test",
+											"type": "text"
+										},
+										{
+											"key": "no_follow",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "no_index",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}/api/{{version}}/categories",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"{{version}}",
+										"categories"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetSingle",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/api/{{version}}/categories/1",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"{{version}}",
+										"categories",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "title",
+											"value": "test 43",
+											"type": "text"
+										},
+										{
+											"key": "content_body",
+											"value": "test",
+											"type": "text"
+										},
+										{
+											"key": "meta_title",
+											"value": "test",
+											"type": "text"
+										},
+										{
+											"key": "meta_key",
+											"value": "test",
+											"type": "text"
+										},
+										{
+											"key": "meta_description",
+											"value": "test",
+											"type": "text"
+										},
+										{
+											"key": "no_follow",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "no_index",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}/api/{{version}}/categories/1",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"{{version}}",
+										"categories",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/api/{{version}}/categories/2",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"{{version}}",
+										"categories",
+										"2"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Tags",
+					"item": [
+						{
+							"name": "Index",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/api/{{version}}/tags?getCount=1&perPage=20&page=1&title",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"{{version}}",
+										"tags"
+									],
+									"query": [
+										{
+											"key": "getCount",
+											"value": "1"
+										},
+										{
+											"key": "perPage",
+											"value": "20"
+										},
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "title",
+											"value": null
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "title",
+											"value": "test 4",
+											"type": "text"
+										},
+										{
+											"key": "content_body",
+											"value": "test",
+											"type": "text"
+										},
+										{
+											"key": "meta_title",
+											"value": "test",
+											"type": "text"
+										},
+										{
+											"key": "meta_key",
+											"value": "test",
+											"type": "text"
+										},
+										{
+											"key": "meta_description",
+											"value": "test",
+											"type": "text"
+										},
+										{
+											"key": "no_follow",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "no_index",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}/api/{{version}}/tags",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"{{version}}",
+										"tags"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetSingle",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/api/{{version}}/tags/1",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"{{version}}",
+										"tags",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "title",
+											"value": "test 43",
+											"type": "text"
+										},
+										{
+											"key": "content_body",
+											"value": "test",
+											"type": "text"
+										},
+										{
+											"key": "meta_title",
+											"value": "test",
+											"type": "text"
+										},
+										{
+											"key": "meta_key",
+											"value": "test",
+											"type": "text"
+										},
+										{
+											"key": "meta_description",
+											"value": "test",
+											"type": "text"
+										},
+										{
+											"key": "no_follow",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "no_index",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}/api/{{version}}/tags/1",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"{{version}}",
+										"tags",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/api/{{version}}/tags/2",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"{{version}}",
+										"tags",
+										"2"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Contents",
+					"item": [
+						{
+							"name": "Index",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/api/{{version}}/content?getCount=1&perPage=20&page=1",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"{{version}}",
+										"content"
+									],
+									"query": [
+										{
+											"key": "getCount",
+											"value": "1"
+										},
+										{
+											"key": "perPage",
+											"value": "20"
+										},
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "getCount",
+											"value": "1",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "title",
+											"value": "test",
+											"type": "text"
+										},
+										{
+											"key": "type",
+											"value": "post",
+											"type": "text"
+										},
+										{
+											"key": "caption",
+											"value": "test",
+											"type": "text"
+										},
+										{
+											"key": "content_body",
+											"value": "test",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}/api/{{version}}/content",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"{{version}}",
+										"content"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetSingle",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/api/{{version}}/content/111",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"{{version}}",
+										"content",
+										"111"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "title",
+											"value": "test1",
+											"type": "text"
+										},
+										{
+											"key": "type",
+											"value": "post",
+											"type": "text"
+										},
+										{
+											"key": "caption",
+											"value": "test",
+											"type": "text"
+										},
+										{
+											"key": "content_body",
+											"value": "test",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}/api/{{version}}/content/10",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"{{version}}",
+										"content",
+										"10"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/api/{{version}}/page/1",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"{{version}}",
+										"page",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "super.admin@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "amd123123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/api/{{version}}/login",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"{{version}}",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Frontend",
+			"item": []
+		}
+	]
+}

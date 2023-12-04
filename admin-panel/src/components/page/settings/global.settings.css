@@ -1,0 +1,25 @@
+.settings-container{
+    
+    min-width: 350px;
+}
+.settings-container .title-holder{
+    display: flex;    
+}
+.settings-container .title-holder .title{
+    flex: 1;
+}
+.settings-container .title-holder .title label{
+    font-weight: 600;
+}
+.settings-container  .action-holder{
+    display: flex;
+  
+}
+.settings-container  .action-holder .action{
+    flex: 1;
+    padding-top: 15px;
+    padding-right: 15px;
+}
+.menu-editor textarea{
+    border: 1px dashed lightgray
+}

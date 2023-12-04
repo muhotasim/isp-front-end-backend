@@ -1,0 +1,163 @@
+@import '~antd/dist/antd.css';
+@import '~react-toastify/dist/ReactToastify.css';
+@import './animate.css';
+
+.trigger {
+  padding: 0 24px;
+  font-size: 18px;
+  line-height: 64px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.trigger:hover {
+  color: #1890ff;
+}
+
+.logo {
+  height: 32px;
+  margin: 16px;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.site-layout .site-layout-background {
+  background: #fff;
+}
+
+.site-page-header {
+  margin-left: -20px;
+}
+
+.ant-table-container {
+  overflow: auto;
+  max-width: 100%;
+}
+.site-layout-background .user{
+  float: right;
+  padding-right: 20px;
+  cursor: pointer;
+}
+
+.spiner {
+  -webkit-animation: spin 1s linear infinite;
+  /* Safari */
+  animation: spin 1s linear infinite;
+}
+
+/* sidebar */
+.ant-layout-sider, .ant-layout-header{
+  background: #353c48;
+}
+
+.logo{
+  background: rgba(255, 255, 255, 0.3);
+}
+.ant-menu.ant-menu-dark, .ant-menu-dark .ant-menu-sub, .ant-menu.ant-menu-dark .ant-menu-sub{
+  background: #353c48;
+  color: rgba(255, 255, 255, 0.65);
+}
+.ant-menu-dark .ant-menu-item:hover, .ant-menu-dark .ant-menu-item-active, .ant-menu-dark .ant-menu-submenu-active, .ant-menu-dark .ant-menu-submenu-open, .ant-menu-dark .ant-menu-submenu-selected, .ant-menu-dark .ant-menu-submenu-title:hover{
+  background-color: transparent;
+}
+
+.ant-menu-dark .ant-menu-item-selected,.ant-menu-dark .ant-menu-item:hover, .ant-menu-dark .ant-menu-submenu-title:hover{
+  background-color: rgba(0,0,0,.2)!important;
+}
+.ant-layout-sider a{
+  color: rgba(255, 255, 255, 0.65);
+}
+/* table */
+.ant-table-thead > tr > th,.ant-table-thead th.ant-table-column-sort{
+  background: #353c48;
+  color: white;
+}
+.ant-table-thead > tr > .ant-table-cell:hover{
+  background: #353c48;
+}
+.ant-pagination-item-active{
+  border-color: #353c48;
+}
+.ant-pagination-item-active a{
+  color: #353c48;
+}
+
+/* dashboard */
+.summery-card .card-details{
+  display: flex;
+  margin-top: 15px;
+  align-content: flex-end;
+}
+.summery-card .card-details .icon{
+  flex: 1;
+}
+.summery-card p {
+  text-align: right;
+  font-size: 18px;
+}
+.summery-card h3 {
+  font-size: 20px;
+  font-weight: 500;
+  color: white;
+}
+.summery-card {
+  padding: 5px 15px;
+  border: 1px solid #0e0f11;
+  margin: 10px;
+  background: #353c48;
+  color: white;
+}
+
+/* sub menu */
+.menu-editor .menu-item{
+  padding: 15px 5px;
+}
+.menu-editor .menu-item .sub-menu {
+  padding-left: 15px;
+  border-left: 1px solid lightgray;
+}
+
+/* flex  */
+.section-and-content-select {
+  display: flex;
+  gap: 15px;
+  min-height: 250px;
+}
+.section-and-content-select .selected-options {
+  flex: 1;
+  border: 1px solid lightgray;
+  padding: 5px 15px;
+}
+.section-and-content-select .loaded-options {
+  flex: 1;
+  border: 1px solid lightgray;
+  padding: 5px 15px;
+}
+@-moz-keyframes spin {
+  from {
+    -moz-transform: rotate(0deg);
+  }
+
+  to {
+    -moz-transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
